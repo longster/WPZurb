@@ -1,0 +1,51 @@
+/*
+Theme Name: WPZurb
+Theme URI: zurb.lduong.com
+Description: Foundation Zurb
+Author: Long Duong
+Author URI: http://lduong.com/
+Version: 1.5
+Tags: zurb, foundation, clean, basic
+*/
+/* General Framework */
+body { background: #353535; text-shadow: 0 1px 0 white; filter: dropshadow(color=white, offx=0 offy=1px); }
+body .button { text-shadow: 0 0 0 black; filter: dropshadow(color=black, offx=0 offy=0); }
+
+/* Top bar navigation */
+#masthead { border-bottom: 1px solid white; background: -moz-linear-gradient(top, #353535 0%, #232323 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #353535), color-stop(100%, #232323)); background: -webkit-linear-gradient(top, #353535 0%, #232323 100%); background: -o-linear-gradient(top, #353535 0%, #232323 100%); background: -ms-linear-gradient(top, #353535 0%, #232323 100%); background: linear-gradient(to bottom, #353535 0%, #232323 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$first-color', endColorstr='$second-color',GradientType=0 ); text-shadow: 0 -1px 0 black; filter: dropshadow(color=black, offx=0 offy=-1px); }
+#masthead input[type="text"]#search { -webkit-border-radius: 100 100 100 100; border-radius: 100 100 100 100; }
+#masthead .top-bar { background: -moz-linear-gradient(top, #353535 0%, #232323 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #353535), color-stop(100%, #232323)); background: -webkit-linear-gradient(top, #353535 0%, #232323 100%); background: -o-linear-gradient(top, #353535 0%, #232323 100%); background: -ms-linear-gradient(top, #353535 0%, #232323 100%); background: linear-gradient(to bottom, #353535 0%, #232323 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$first-color', endColorstr='$second-color',GradientType=0 ); margin-bottom: 0; }
+#masthead .logo-small a { width: 100px; overflow: hidden; float: left; margin-right: 30px; }
+#masthead a { font-weight: normal; font-size: .9em; }
+#masthead a.toggle-nav { display: block; width: 16px; height: 16px; padding: 0; background: url(img/nav-toggle.png) 0 0 no-repeat; position: absolute; left: 95px; top: 20px; opacity: 0.3; z-index: 1; -webkit-transition: all 500ms ease-in-out; -moz-transition: all 500ms ease-in-out; -o-transition: all 500ms ease-in-out; -ms-transition: all 500ms ease-in-out; }
+#masthead a.open { -webkit-transform: rotate(135deg); -moz-transform: rotate(135deg); -o-transform: rotate(135deg); -ms-transform: rotate(135deg); transform: rotate(135deg); opacity: 0.6; z-index: 1; -moz-transform-origin: center center; }
+#masthead a:hover.toggle-nav { opacity: .9; }
+#masthead .active a { color: #2ba6cb; }
+#masthead .menu-fallback { color: #111111; float: left; padding: 0 10px; border-right: solid 1px #2b2b2b; border-left: solid 1px #2b2b2b; background-color: #e5e5e5; }
+#masthead .top-bar-section a:not(.button) { background: -moz-linear-gradient(top, #353535 0%, #232323 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #353535), color-stop(100%, #232323)); background: -webkit-linear-gradient(top, #353535 0%, #232323 100%); background: -o-linear-gradient(top, #353535 0%, #232323 100%); background: -ms-linear-gradient(top, #353535 0%, #232323 100%); background: linear-gradient(to bottom, #353535 0%, #232323 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$first-color', endColorstr='$second-color',GradientType=0 ); }
+.active #masthead .top-bar-section a:not(.button) { color: #2ba6cb; }
+#masthead .top-bar-section a:hover:not(.button) { background: #353535; }
+#masthead .top-bar-section .has-form { background: -moz-linear-gradient(top, #353535 0%, #232323 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #353535), color-stop(100%, #232323)); background: -webkit-linear-gradient(top, #353535 0%, #232323 100%); background: -o-linear-gradient(top, #353535 0%, #232323 100%); background: -ms-linear-gradient(top, #353535 0%, #232323 100%); background: linear-gradient(to bottom, #353535 0%, #232323 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$first-color', endColorstr='$second-color',GradientType=0 ); }
+#masthead .top-bar-section .search-query { -webkit-border-radius: 50px 50px 50px 50px; border-radius: 50px 50px 50px 50px; background: url(http://cpanel.net/wp-content/themes/cp/images/search-dark.png) no-repeat 10px 7px #444444; color: #8D8D8D; padding: 5px 15px 3px 35px; text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); border-top: 1px solid black; border-bottom: 1px solid #4b4b4b; border-right: 0; border-left: 0; top: 11px; }
+
+.identity { min-height: 140px; padding: 25px 0 25px; border-bottom: 1px solid #e5e5e5; background: white; }
+.identity a.brand.logo { padding-left: 100px; margin-bottom: 0; min-height: 105px; border: 0px solid red; display: block; background: url(img/logo-wpf.png) no-repeat left center; }
+.identity h1 { font-family: "Russo One", sans-serif; font-size: 35px; border: 0px solid red; margin-bottom: 0; padding-top: 24px; line-height: 24px; }
+.identity h3 { font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: lighter; font-size: 24.5px; border: 0px solid red; }
+
+#navdrop { padding: 50px; display: none; background: white; border-bottom: 1px solid #e5e5e5; }
+
+.hero-unit { padding: 30px 50px 20px; max-width: 100%; background-color: #f8f8f8; border-bottom: 1px solid #e5e5e5; }
+.hero-unit h1 { font-family: "Russo One", sans-serif; font-size: 6.3em; line-height: 1em; margin-bottom: 0; }
+.hero-unit h2 { font-weight: lighter; font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 3.0em; line-height: 1.2em; }
+
+/* Body Content */
+.content { background: white; padding-top: 50px; border-bottom: 1px solid black; }
+.content blockquote { font-family: roman; }
+
+/* Footer */
+#colophon { text-shadow: 0 -1px 0 black; filter: dropshadow(color=black, offx=0 offy=-1px); color: #777; margin: 30px 0; }
+#colophon .aside-footer { margin-bottom: 30px; }
+#colophon .credit { border-top: 1px solid #444444; padding-top: 30px; }
+#colophon h3 { color: #777; }
+#colophon small { text-align: center; display: block; }
