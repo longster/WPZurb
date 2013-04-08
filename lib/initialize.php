@@ -86,13 +86,13 @@ Enqueue CSS and Scripts
 function wpzurb_scripts_and_styles() {
     if (!is_admin()) {
         // modernizr (without media query polyfill)
-        wp_register_script( 'wpzurb-modernizr', get_template_directory_uri() . '/js/vendor/custom.modernizr.js', array(), '2.6.2', false );
+        wp_register_script( 'wpzurb-modernizr', get_stylesheet_directory_uri() . '/js/vendor/custom.modernizr.js', array(), '2.6.2', false );
         // deregister WordPress built in jQuery
         wp_deregister_script('jquery');
         // register Google jQuery
         wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null, true);
         // adding Foundation scripts file in the footer
-        wp_register_script( 'wpzurb-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
+        wp_register_script( 'wpzurb-js', get_stylesheet_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
         
 
         // enqueue styles and scripts
