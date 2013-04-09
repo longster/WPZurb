@@ -15,9 +15,9 @@ function wpzurb_setup() {
     add_filter( 'wp_head', 'wpzurb_remove_wp_widget_recent_comments_style', 1 );
     // clean up comment styles in the head
     add_action('wp_head', 'wpzurb_remove_recent_comments_style', 1);
-
     // enqueue base scripts and styles
     add_action('wp_enqueue_scripts', 'wpzurb_scripts_and_styles', 999); 
+    
 } // wpzurb_setup
 
 
@@ -75,6 +75,7 @@ function wpzurb_remove_recent_comments_style() {
     remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
   }
 }
+
 
 
 
