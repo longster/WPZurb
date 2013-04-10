@@ -8,15 +8,31 @@
  */
 ?>
 	<footer id="colophon">
-		<div class="row aside-footer">
-			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer')) : ?>
-					Configure at Dashboard > Appearance > Widget > Footer
-	        <?php endif; ?>
+		<div class="aside-footer">
+			<div class="row">
+				<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer')) : ?>
+						Configure at Dashboard > Appearance > Widget > Footer
+		        <?php endif; ?>
+			</div>
 		</div>
+		
 		<div class="credit">
 			<div class="row">
 				<div class="large-12 columns">
 					<small><?php wpzurb_credits(); ?></small>
+	                <?php
+	                    wp_nav_menu( array(
+	                        'theme_location' => 'footer-menu',
+	                        'container' => false,
+	                        'depth' => 0,
+	                        'items_wrap' => '<ul class="right inline-list">%3$s</ul>',
+	                        'fallback_cb' => 'wpzurb_menu_fallback', // workaround to show a message to set up a menu
+	                    	'walker' => new wpzurb_walker( array(
+	                            'in_top_bar' => false,
+	                            'item_type' => 'li'
+	                        ) ),
+	                    ) );
+	                ?>
 				</div>
 			</div>
 		</div>

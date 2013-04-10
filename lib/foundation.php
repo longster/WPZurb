@@ -32,7 +32,7 @@ function wpzurb_pagination() {
 function wpzurb_menu_fallback() {
 	echo '<div class="menu-fallback">';
 	// Translators 1: Link to Menus, 2: Link to Customize
-  	printf( __( 'Customize primary menu located under %1$s or %2$s the design.', 'wpzurb' ),
+  	printf( __( 'Customize your menu located under %1$s or %2$s the design.', 'wpzurb' ),
   		sprintf(  __( '<a href="%s">Menus</a>', 'wpzurb' ),
   			get_admin_url( get_current_blog_id(), 'nav-menus.php' )
   		),

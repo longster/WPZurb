@@ -8,7 +8,7 @@
  */
 get_header(); ?>
 
-    <section class="identity">
+    <section id="identity">
 	    <div class="row">
 			<div class="large-12 columns">
 				<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="brand logo">

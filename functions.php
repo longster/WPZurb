@@ -77,24 +77,23 @@ add_action('after_setup_theme', 'wpzurb_theme_support');
 
 /********************** Widgetized!!!!!!!!! **********************/
 // create widget areas: sidebar, footer
-$sidebars = array('Default Sidebar');
-foreach ($sidebars as $sidebar) {
-    register_sidebar(array('name'=> $sidebar,
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
-    ));
-}
-$sidebars = array('Footer');
-foreach ($sidebars as $sidebar) {
-    register_sidebar(array('name'=> $sidebar,
-        'before_widget' => '<aside id="%1$s" class="large-3 columns widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
-    ));
-}
+register_sidebar( array(
+		'name' => __( 'Default Sidebar', '' ),
+		'id' => 'sidebar',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>'
+) );
+register_sidebar( array(
+		'name' => __( 'Footer', '' ),
+		'id' => 'footer',
+		'description' => __( 'Override parent widget', '' ),
+		'before_widget' => '<aside id="%1$s" class="large-3 columns widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>'
+) );
 
 
 
