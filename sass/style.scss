@@ -21,7 +21,6 @@ body {
 	}
 }
 
-
 /* Top bar navigation */
 #masthead {
 	border-bottom: 1px solid $color-white;
@@ -33,7 +32,8 @@ body {
 	}
 	
 	.top-bar {
-		@include filter-gradient(#353535, #232323);
+		//@include filter-gradient(#353535, #232323);
+		background: none;
 		margin-bottom: 0;
 	}
 
@@ -42,8 +42,8 @@ body {
 		overflow: hidden;
 		float: left;
 		margin-right: 30px;
-		border-left: 1px solid #2b2b2b;
-		@include global-box-shadows(-1px 0 0 0 #000);
+		//border-left: 1px solid #2b2b2b;
+		//@include global-box-shadows(-1px 0 0 0 #000);
 	}	
 
 	a {
@@ -95,23 +95,47 @@ body {
 	}
 
 	.top-bar-section {
+		& > ul {
+			background: none;
+		}
+		.divider {
+			border-right: 0;
+			border-left: 0;
+		}
 		a:not(.button) {
-			@include filter-gradient(#353535, #232323);
+			//@include filter-gradient(#353535, #232323);
+			@extend %texttransition;
+			background: none;
 			.active & {
 				color: #2ba6cb;
 			}
 		}
 		a:hover:not(.button) {
-			background: $color-charcoal;
+			//background: $color-charcoal;
+			color: #2ba6cb;
 		 }
+		.dropdown {
+			background: #333;
+			@include global-box-shadows(0px 2px 3px 0px rgba(0, 0, 0, 1));
+			li {
+				border-bottom: 1px solid #444;
+			} 
+			a {
+				padding: 15px;
+			}	
+		}
+		.has-dropdown > a:after {
+			margin-top: .5px;
+		}
 
 		.has-form {
-			@include filter-gradient(#353535, #232323);
+			background: none;
+			//@include filter-gradient(#353535, #232323);
 		}
 
 		ul.left li:last-child {
-			border-right: 1px solid #000;
-			@include global-box-shadows(1px 0 0 0 #2b2b2b);
+			//border-right: 1px solid #000;
+			//@include global-box-shadows(1px 0 0 0 #2b2b2b);
 		}
 
 		.search-query {

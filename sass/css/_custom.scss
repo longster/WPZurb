@@ -45,3 +45,14 @@ $font-ubuntu: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif !importan
 	background: linear-gradient(to bottom,  $first-color 0%,$second-color 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first-color', endColorstr='$second-color',GradientType=0 );
 }
+
+
+
+/* Module framework */
+// Transition
+%texttransition {	
+	-webkit-transition: color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out;
+	-o-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
+}
