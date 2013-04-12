@@ -71,9 +71,8 @@
     
     <section id="navdrop">
         <div class="row">
-          <div class="large-3 columns">Lorem Ipsum</div>
-          <div class="large-3 columns">Lorem Ipsum</div>
-          <div class="large-3 columns">Lorem Ipsum</div>
-          <div class="large-3 columns">Lorem Ipsum</div>
+            <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Navdrop')) : ?>
+                Configure at Dashboard > Appearance > Widget > Footer
+            <?php endif; ?>
         </div>
     </section>

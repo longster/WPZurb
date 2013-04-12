@@ -33,14 +33,14 @@ body .button { text-shadow: 0 0 0 black; filter: dropshadow(color=black, offx=0 
 
 #identity { min-height: 140px; padding: 25px 0 25px; border-bottom: 1px solid #e5e5e5; background: white; }
 #identity a.brand.logo { padding-left: 100px; margin-bottom: 0; min-height: 105px; display: block; background: url(img/logo-wpf.png) no-repeat left center; }
-#identity h1 { font-family: "Russo One", sans-serif; font-size: 35px; margin-bottom: 0; padding-top: 24px; line-height: 24px; }
-#identity h3 { font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: lighter; font-size: 24.5px; border: 0px solid red; }
+#identity h1 { font-family: "Russo One", sans-serif !important; color: #353535; font-size: 35px; margin-bottom: 0; padding-top: 24px; line-height: 24px; }
+#identity h3 { font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif !important; color: #353535; font-weight: lighter; font-size: 24.5px; border: 0px solid red; }
 
-#navdrop { padding: 50px; display: none; background: white; border-bottom: 1px solid #e5e5e5; }
+#navdrop { padding: 20px 0; display: none; background: white; border-bottom: 1px solid #e5e5e5; }
 
 .hero-unit { padding: 30px 50px 20px; max-width: 100%; background-color: #f8f8f8; border-bottom: 1px solid #e5e5e5; }
-.hero-unit h1 { font-family: "Russo One", sans-serif; font-size: 6.3em; line-height: 1em; margin-bottom: 0; }
-.hero-unit h2 { font-weight: lighter; font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 3.0em; line-height: 1.2em; }
+.hero-unit h1 { font-family: "Russo One", sans-serif !important; font-size: 6.3em; line-height: 1em; margin-bottom: 0; color: #353535; }
+.hero-unit h2 { font-weight: lighter; font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-size: 3.0em; line-height: 1.2em; color: #353535; }
 
 /* Body Content */
 .content { background: white; padding-top: 50px; border-bottom: 1px solid black; }
@@ -50,6 +50,6 @@ body .button { text-shadow: 0 0 0 black; filter: dropshadow(color=black, offx=0 
 #colophon { text-shadow: 0 -1px 0 black; filter: dropshadow(color=black, offx=0 offy=-1px); color: #777; margin: 30px 0; }
 #colophon .aside-footer { margin-bottom: 10px; }
 #colophon .credit { border-top: 1px solid #444444; padding-top: 30px; }
-#colophon h3 { color: #777; }
+#colophon h5 { color: #777; }
 #colophon .menu-fallback { float: right; font-size: 10px; padding: 0 10px; background: none; }
 #colophon ul.right.inline-list { font-size: 10px; }

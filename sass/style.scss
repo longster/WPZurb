@@ -147,6 +147,7 @@ body {
 
 	h1 {
 		font-family: $font-russo;
+		color: $color-charcoal;
 		font-size: 35px;
 		margin-bottom: 0;
 		padding-top: 24px;
@@ -154,6 +155,7 @@ body {
 	}
 	h3 {
 		font-family: $font-ubuntu;
+		color: $color-charcoal;
 		font-weight: lighter;
 		font-size: 24.5px;
 		border: 0px solid red;
@@ -161,7 +163,7 @@ body {
 }
 
 #navdrop {
-	padding:50px;
+	padding:20px 0;
 	display:none;
 	background: $color-white;
 	border-bottom: 1px solid $color-lt-gray;
@@ -178,6 +180,7 @@ body {
 		font-size: 6.3em;
 		line-height: 1em;
 		margin-bottom: 0;
+		color: $color-charcoal;
 
 	}
 	h2 {
@@ -185,6 +188,7 @@ body {
 		font-family: $font-ubuntu;
 		font-size: 3.0em;
 		line-height: 1.2em;
+		color: $color-charcoal;
 	}
 }
 
@@ -211,7 +215,7 @@ body {
 		border-top: 1px solid #444;	
 		padding-top: 30px;
 	}
-	h3 {
+	h5 {
 		color: #777;
 	}
 	.menu-fallback {

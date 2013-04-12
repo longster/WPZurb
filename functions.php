@@ -76,7 +76,7 @@ add_action('after_setup_theme', 'wpzurb_theme_support');
 
 
 /********************** Widgetized!!!!!!!!! **********************/
-// create widget areas: sidebar, footer
+// create widget areas: sidebar, navdrop, footer
 register_sidebar( array(
 		'name' => __( 'Default Sidebar', '' ),
 		'id' => 'sidebar',
@@ -85,14 +85,23 @@ register_sidebar( array(
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>'
 ) );
+
+register_sidebar( array(
+		'name' => __( 'Navdrop', '' ),
+		'id' => 'navdrop',
+		'before_widget' => '<aside id="%1$s" class="large-3 columns widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>'
+) );
+
 register_sidebar( array(
 		'name' => __( 'Footer', '' ),
 		'id' => 'footer',
-		'description' => __( 'Override parent widget', '' ),
 		'before_widget' => '<aside id="%1$s" class="large-3 columns widget %2$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>'
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>'
 ) );
 
 
