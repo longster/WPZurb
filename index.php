@@ -9,6 +9,17 @@
 
 get_header(); ?>
 
+	<?php if(!is_front_page() && is_home('docs')) : ?>
+    <section id="bannerHead">
+        <div class="row">
+            <div class="large-12 columns">
+                <h1>Docs</h1>
+            </div>
+        </div>
+    </section>
+	<?php else: ?>
+	<?php endif; ?>
+
 	<section class="content">
 		<div class="row">
 			

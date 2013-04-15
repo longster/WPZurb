@@ -29,13 +29,13 @@ get_header(); ?>
             </div>
             <div class="row">
             	<div class="large-4 columns">
-            		<a class="small button large-4 expand radius"> WP Foundation</a>
+            		<a href="https://github.com/longster/WPZurb/archive/master.zip" class="small button large-4 expand radius"> Download WPZurb</a>
             	</div>
             	<div class="large-4 columns">
-            		<a class="small button large-4 expand radius">View Project on Github</a>
+            		<a href="https://github.com/longster/WPZurb" class="small button large-4 expand radius" target="_blank">View Project on Github</a>
             	</div>
             	<div class="large-4 columns">
-            		<a class="small button large-4 expand radius">Fork Me</a>
+            		<a href="https://github.com/longster/WPZurb/fork" class="small button large-4 expand radius">Fork Me</a>
             	</div>
             </div>
         </div>

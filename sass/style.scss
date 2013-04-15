@@ -20,6 +20,10 @@ body {
     	@include global-text-shadows(0, 0, 0, #000);
 	}
 }
+a {
+	@extend %texttransition;
+}
+
 
 /* Top bar navigation */
 #masthead {
@@ -60,10 +64,7 @@ body {
 			top: 20px;
 			opacity: 0.3;
 			z-index: 1;
-			-webkit-transition: all 500ms ease-in-out;
-			-moz-transition: all 500ms ease-in-out;
-			-o-transition: all 500ms ease-in-out;
-			-ms-transition: all 500ms ease-in-out;
+			@extend %easetransition;
 		}
 		&.open {
 			-webkit-transform: rotate(135deg);
@@ -185,6 +186,10 @@ body {
 		border: 0px solid red;
 	}
 }
+#bannerHead {
+	background: $color-white;
+	border-bottom: 1px solid $color-lt-gray;
+}
 
 #navdrop {
 	padding:20px 0;
@@ -194,10 +199,10 @@ body {
 }
 
 .hero-unit {
-	padding: 30px 50px 20px; 
+	padding: 30px 50px 00px; 
 	max-width:100%; 
-	background-color:#f8f8f8; 
-	border-bottom: 1px solid #e5e5e5;
+	background-color: #fff;//#f8f8f8; 
+	//border-bottom: 1px solid #e5e5e5;
 
 	h1 {
 		font-family: $font-russo;

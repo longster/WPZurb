@@ -12,7 +12,7 @@
  * Sets up the content width value based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )
-	$content_width = 625;
+	$content_width = 870;
 
 
 /* Initial set up - lib/clean.php

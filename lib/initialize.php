@@ -80,10 +80,10 @@ function wpzurb_remove_recent_comments_style() {
 
 
 /**********************
-Enqueue CSS and Scripts
+Enqueue Scripts
 **********************/
 
-// loading modernizr and jquery, and reply script
+// load modernizr, jquery, and js (navtoggle and foundation) script
 function wpzurb_scripts_and_styles() {
     if (!is_admin()) {
         // modernizr (without media query polyfill)
@@ -92,13 +92,17 @@ function wpzurb_scripts_and_styles() {
         wp_deregister_script('jquery');
         // register Google jQuery
         wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null, true);
-        // adding Foundation scripts file in the footer
-        wp_register_script( 'wpzurb-js', get_stylesheet_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
         
+        // adding scripts file in the footer
+        //wp_register_script( 'wpzurb-foundation', get_stylesheet_directory_uri() . '/js/foundation/foundation.js', array( 'jquery' ), '', true );
+        //wp_register_script( 'wpzurb-navtoggle', get_stylesheet_directory_uri() . '/js/nav-toggle.js', array( 'jquery' ), '', true );
 
         // enqueue styles and scripts
         wp_enqueue_script( 'wpzurb-modernizr' );   
         wp_enqueue_script( 'jquery' );
+        //wp_enqueue_script( 'wpzurb-foundation' );
+        //wp_enqueue_script( 'wpzurb-navtoggle' );
+       
     }
 }
 

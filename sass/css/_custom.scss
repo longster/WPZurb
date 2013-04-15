@@ -56,3 +56,9 @@ $font-ubuntu: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif !importan
 	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
+%easetransition {
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+}
