@@ -1,13 +1,13 @@
 <?php
-/** _content_left.php
+/** _content_right.php
  *
- * Template Name: Content Left Side
+ * Template Name: Content Right Side
  */
 get_header(); ?>
 
 	<section class="content">
 		<div class="row">
-			<div class="large-9 columns">
+			<div class="large-9 columns push-3">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'loop/content', 'page' ); ?>
 			<?php endwhile; // end of the loop. ?>

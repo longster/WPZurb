@@ -5,11 +5,12 @@
  * @package wpzurb
  */
 
-get_header();
-?>
+get_header(); ?>
 
-	<div id="primary" class="content-area image-attachment">
-		<div id="content" class="site-content" role="main">
+	
+	<section class="content">
+		<div class="row">
+			<div class="large-9 columns push-3">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -116,7 +117,8 @@ get_header();
 
 		<?php endwhile; // end of the loop. ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+			</div><!-- .large-9 -->
+		</div><!-- .row -->
+	</section>
 
 <?php get_footer(); ?>

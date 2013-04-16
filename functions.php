@@ -111,8 +111,41 @@ register_sidebar( array(
 
 if ( ! function_exists( 'wpzurb_entry_meta' ) ) :
 function wpzurb_entry_meta() {
-	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('Posted on %s ', 'wpzurb'), get_the_time('l, F jS, Y'), get_the_time()) .'</time>';
-	echo '<span class="byline author">'. __(' by', 'wpzurb') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .'</a></span>';
+	// Translators: used between list items, there is a space after the comma.
+	$categories_list = get_the_category_list( __( ', ', 'wpzurb' ) );
+
+	// Translators: used between list items, there is a space after the comma.
+	$tag_list = get_the_tag_list( '', __( ', ', 'wpzurb' ) );
+
+	$date = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a>',
+		esc_url( get_permalink() ),
+		esc_attr( get_the_time() ),
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() )
+	);
+
+	$author = sprintf( '<span class="author"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		esc_attr( sprintf( __( 'View all posts by %s', 'wpzurb' ), get_the_author() ) ),
+		get_the_author()
+	);
+
+	// Translators: 1 is category, 2 is tag, 3 is the date and 4 is the author's name.
+	if ( $tag_list ) {
+		$utility_text = __( 'Category: %1$s | Tag: %2$s - %3$s<span class="by-author"> by %4$s</span>.', 'wpzurb' );
+	} elseif ( $categories_list ) {
+		$utility_text = __( 'Posted in %1$s on %3$s<span class="by-author"> by %4$s</span>.', 'wpzurb' );
+	} else {
+		$utility_text = __( 'Posted on %3$s<span class="by-author"> by %4$s</span>.', 'wpzurb' );
+	}
+
+	printf(
+		$utility_text,
+		$categories_list,
+		$tag_list,
+		$date,
+		$author
+	);
 }
 endif; // Post Meta information
 

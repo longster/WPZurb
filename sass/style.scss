@@ -229,6 +229,13 @@ a {
 	blockquote {
 		font-family: roman;
 	}
+	.sticky {
+	}
+	.sticky.fixed { 
+	// important - this override the bug  
+	// that conflicts with topbar sticky
+		position: static;
+	}
 }
 
 /* Footer */

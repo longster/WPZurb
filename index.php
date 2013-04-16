@@ -24,7 +24,7 @@ get_header(); ?>
 		<div class="row">
 			
 
-			<div class="large-9 columns push-3">
+			<div class="large-9 columns">
 
 				<?php if ( have_posts() ) : ?>
 
