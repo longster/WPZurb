@@ -10,7 +10,7 @@ get_header(); ?>
 	
 	<section class="content">
 		<div class="row">
-			<div class="large-9 columns push-3">
+			<div class="large-8 columns push-2">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
