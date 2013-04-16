@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-    <section id="bannerHead">
+    <section id="the-title">
         <div class="row">
             <div class="large-12 columns">
                 <header class="page-header">

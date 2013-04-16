@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <section id="bannerHead">
+    <section id="the-title">
         <div class="row">
             <div class="large-12 columns">
                 <h1><?php the_title(); ?></h1>

@@ -186,9 +186,14 @@ a {
 		border: 0px solid red;
 	}
 }
-#bannerHead {
+#the-title {
 	background: $color-white;
 	border-bottom: 1px solid $color-lt-gray;
+	padding: 10px 0 10px;
+	h1 {
+		font-size: 4.4em;
+		margin: .2em 0;
+	}
 }
 
 #navdrop {
