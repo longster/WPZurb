@@ -191,7 +191,7 @@ a {
 	border-bottom: 1px solid $color-lt-gray;
 	padding: 10px 0 10px;
 	h1 {
-		font-size: 4.4em;
+		font-size: 4.2em;
 		margin: .2em 0;
 	}
 }
@@ -227,6 +227,10 @@ a {
 }
 
 /* Body Content */
+.blog article {
+	border-bottom: 1px dotted #e5e5e5;
+	margin-bottom: 2.00em;
+}
 .content {
 	background: $color-white;
 	padding-top: 50px;

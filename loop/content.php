@@ -6,29 +6,25 @@
 		<?php endif; ?>
 		<header class="entry-header">
 			<?php the_post_thumbnail(); ?>
+		<?php if ( is_single() ) : ?>
+			<?php /*h1 class="entry-title"><?php the_title(); ?></h1 */ ?>
+		<?php else : ?>
+			<?php wpzurb_entry_meta(); ?>
 			<h1 class="entry-title">
 				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'wpzurb' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h1>
-			<?php if ( comments_open() ) : ?>
+		<?php endif; // is_single() ?>
+		<?php if ( comments_open() ) : ?>
 				<div class="comments-link">
 					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'wpzurb' ) . '</span>', __( '1 Reply', 'wpzurb' ), __( '% Replies', 'wpzurb' ) ); ?>
 				</div><!-- .comments-link -->
-			<?php endif; // comments_open() ?>
-
-			<?php wpzurb_entry_meta(); ?>
+		<?php endif; // comments_open() ?>
 		</header><!-- .entry-header -->
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
-
-		<?php/* elseif (has_post_format('status')) : ?>
-		<div class="entry-content status">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wpzurb' ) ); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'wpzurb' ), 'after' => '</div>' ) ); ?>
-		</div><!-- .entry-content --> */?>
-		
+		</div><!-- .entry-summary -->		
 		<?php else : ?>
 		<div class="entry-content">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wpzurb' ) ); ?>
@@ -36,7 +32,7 @@
 		</div><!-- .entry-content -->
 		<?php endif; ?>
 
-		<footer class="entry-meta">			
+		<footer class="entry-meta">		
 			<?php if ( is_singular() && get_the_author_meta( 'description' ) && is_multi_author() ) : // If a user has filled out their description and this is a multi-author blog, show a bio on their entries. ?>
 				<div class="author-info">
 					<div class="author-avatar">

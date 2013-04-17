@@ -132,11 +132,11 @@ function wpzurb_entry_meta() {
 
 	// Translators: 1 is category, 2 is tag, 3 is the date and 4 is the author's name.
 	if ( $tag_list ) {
-		$utility_text = __( 'Category: %1$s | Tag: %2$s - %3$s<span class="by-author"> by %4$s</span>.', 'wpzurb' );
+		$utility_text = __( 'Filed: %1$s | %2$s - %3$s<span class="by-author"> by %4$s</span>.', 'wpzurb' );
 	} elseif ( $categories_list ) {
-		$utility_text = __( 'Posted in %1$s on %3$s<span class="by-author"> by %4$s</span>.', 'wpzurb' );
+		$utility_text = __( 'Filed: %1$s | %3$s <span class="by-author">by %4$s</span>.', 'wpzurb' );
 	} else {
-		$utility_text = __( 'Posted on %3$s<span class="by-author"> by %4$s</span>.', 'wpzurb' );
+		$utility_text = __( 'Filed: %3$s<span class="by-author"> by %4$s</span>.', 'wpzurb' );
 	}
 
 	printf(

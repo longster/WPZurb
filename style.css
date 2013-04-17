@@ -47,7 +47,7 @@ body .button { text-shadow: 0 0 0 black; filter: dropshadow(color=black, offx=0 
 #identity h3 { font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif !important; color: #353535; font-weight: lighter; font-size: 24.5px; border: 0px solid red; }
 
 #the-title { background: white; border-bottom: 1px solid #e5e5e5; padding: 10px 0 10px; }
-#the-title h1 { font-size: 4.4em; margin: 0.2em 0; }
+#the-title h1 { font-size: 4.2em; margin: 0.2em 0; }
 
 #navdrop { padding: 20px 0; display: none; background: white; border-bottom: 1px solid #e5e5e5; }
 
@@ -56,6 +56,8 @@ body .button { text-shadow: 0 0 0 black; filter: dropshadow(color=black, offx=0 
 .hero-unit h2 { font-weight: lighter; font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-size: 3.0em; line-height: 1.2em; color: #353535; }
 
 /* Body Content */
+.blog article { border-bottom: 1px dotted #e5e5e5; margin-bottom: 2.00em; }
+
 .content { background: white; padding-top: 50px; border-bottom: 1px solid black; }
 .content blockquote { font-family: roman; }
 .content article { padding-bottom: 2.0em; }
