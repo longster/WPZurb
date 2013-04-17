@@ -326,7 +326,7 @@ p { font-family: inherit; font-weight: normal; font-size: 1em; line-height: 1.6;
 p aside { font-size: 0.875em; line-height: 1.35; font-style: italic; }
 
 /* Default header styles */
-h1, h2, h3, h4, h5, h6 { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: bold; font-style: normal; color: #222222; text-rendering: optimizeLegibility; margin-top: 0.2em; margin-bottom: 0.5em; line-height: 1.2125em; }
+h1, h2, h3, h4, h5, h6 { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: lighter; font-style: normal; color: #222222; text-rendering: optimizeLegibility; margin-top: 0.2em; margin-bottom: 0.5em; line-height: 1.2125em; }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; }
 
 h1 { font-size: 2.125em; }
@@ -715,7 +715,7 @@ form.custom .custom.disabled { background-color: #dddddd; }
 .top-bar-section ul li > a.button.success:hover { background: #457a1a; }
 .top-bar-section ul li > a.button.alert { background: #c60f13; }
 .top-bar-section ul li > a.button.alert:hover { background: #970b0e; }
-.top-bar-section ul li.active a { background: #2b2b2b; }
+.top-bar-section ul li.active > a { background: #2b2b2b; }
 .top-bar-section .has-form { padding: 18.33333px; }
 .top-bar-section .has-dropdown { position: relative; }
 .top-bar-section .has-dropdown > a:after { content: ""; display: block; width: 0; height: 0; border: solid 5px; border-color: transparent transparent transparent rgba(255, 255, 255, 0.5); margin-right: 18.33333px; margin-top: -4.5px; position: absolute; top: 22px; right: 0; }
@@ -839,6 +839,10 @@ form.custom .custom.disabled { background-color: #dddddd; }
 .joyride-close-tip:hover, .joyride-close-tip:focus { color: #eeeeee !important; }
 
 .joyride-modal-bg { position: fixed; height: 100%; width: 100%; background: transparent; background: rgba(0, 0, 0, 0.5); z-index: 100; display: none; top: 0; left: 0; cursor: pointer; }
+
+.joyride-expose-wrapper { background-color: #ffffff; position: absolute; border-radius: 3px; z-index: 102; -moz-box-shadow: 0px 0px 30px white; -webkit-box-shadow: 0px 0px 15px white; box-shadow: 0px 0px 15px white; }
+
+.joyride-expose-cover { background: transparent; border-radius: 3px; position: absolute; z-index: 9999; top: 0px; left: 0px; }
 
 /* Styles for screens that are atleast 768px; */
 @media only screen and (min-width: 48em) { .joyride-tip-guide { width: 300px; left: inherit; }

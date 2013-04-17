@@ -76,3 +76,15 @@
             <?php endif; ?>
         </div>
     </section>
+    
+
+    <section id="identity">
+        <div class="row">
+            <div class="large-12 columns">
+                <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="brand logo">
+                    <h1 class="logo">WP Foundation Framework</h1>
+                    <h3>HTML5Boilerplate + Foundation Zurb + Wireframe</h3>
+                </a>
+            </div>
+        </div>
+    </section>

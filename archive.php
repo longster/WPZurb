@@ -21,7 +21,8 @@ get_header(); ?>
 							} elseif ( is_tag() ) {
 								printf( __( 'Tag: %s', 'wpzurb' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 
-							} elseif ( is_author() ) {
+							} 
+							elseif ( is_author() ) {
 								/* Queue the first post, that way we know
 								 * what author we're dealing with (if that is the case).
 								*/

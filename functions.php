@@ -51,7 +51,9 @@ function wpzurb_theme_support() {
 		'link', 
 		'image', 
 		'quote', 
-		'status'
+		'status',
+		'gallery',
+		'video'
 	)); // Add post formats supports.
 	
 	add_theme_support('menus');
@@ -130,13 +132,13 @@ function wpzurb_entry_meta() {
 		get_the_author()
 	);
 
-	// Translators: 1 is category, 2 is tag, 3 is the date and 4 is the author's name.
+	// Translators: 1 (%1$s) is category, 2 (%2$s) is tag, 3 (%3$s) is the date and 4 (%4$s) is the author's name.
 	if ( $tag_list ) {
-		$utility_text = __( 'Filed: %1$s | %2$s - %3$s<span class="by-author"> by %4$s</span>.', 'wpzurb' );
+		$utility_text = __( '%1$s / %2$s / <span class="by-author"> by %4$s</span>', 'wpzurb' );
 	} elseif ( $categories_list ) {
-		$utility_text = __( 'Filed: %1$s | %3$s <span class="by-author">by %4$s</span>.', 'wpzurb' );
+		$utility_text = __( '%1$s / %3$s / <span class="by-author">by %4$s</span>', 'wpzurb' );
 	} else {
-		$utility_text = __( 'Filed: %3$s<span class="by-author"> by %4$s</span>.', 'wpzurb' );
+		$utility_text = __( '%3$s / <span class="by-author">by %4$s</span>', 'wpzurb' );
 	}
 
 	printf(
@@ -148,6 +150,75 @@ function wpzurb_entry_meta() {
 	);
 }
 endif; // Post Meta information
+
+
+
+
+
+
+if ( ! function_exists( 'wpzurb_comment' ) ) :
+/**
+ * Template for comments and pingbacks.
+ *
+ * To override this walker in a child theme without modifying the comments template
+ * simply create your own wpzurb_comment(), and that function will be used instead.
+ *
+ * Used as a callback by wp_list_comments() for displaying the comments.
+ *
+ * @since Twenty Twelve 1.0
+ */
+function wpzurb_comment( $comment, $args, $depth ) {
+	$GLOBALS['comment'] = $comment;
+	switch ( $comment->comment_type ) :
+		case 'pingback' :
+		case 'trackback' :
+		// Display trackbacks differently than normal comments.
+	?>
+	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+		<p><?php _e( 'Pingback:', 'wpzurb' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'wpzurb' ), '<span class="edit-link">', '</span>' ); ?></p>
+	<?php
+			break;
+		default :
+		// Proceed with normal comments.
+		global $post;
+	?>
+	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+		<article id="comment-<?php comment_ID(); ?>" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<?php
+					echo get_avatar( $comment, 44 );
+					printf( '<cite class="fn">%1$s %2$s</cite>',
+						get_comment_author_link(),
+						// If current post author is also comment author, make it known visually.
+						( $comment->user_id === $post->post_author ) ? '<span> ' . __( 'Post author', 'wpzurb' ) . '</span>' : ''
+					);
+					printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
+						esc_url( get_comment_link( $comment->comment_ID ) ),
+						get_comment_time( 'c' ),
+						/* translators: 1: date, 2: time */
+						sprintf( __( '%1$s at %2$s', 'wpzurb' ), get_comment_date(), get_comment_time() )
+					);
+				?>
+			</header><!-- .comment-meta -->
+
+			<?php if ( '0' == $comment->comment_approved ) : ?>
+				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'wpzurb' ); ?></p>
+			<?php endif; ?>
+
+			<section class="comment-content comment">
+				<?php comment_text(); ?>
+				<?php edit_comment_link( __( 'Edit', 'wpzurb' ), '<p class="edit-link">', '</p>' ); ?>
+			</section><!-- .comment-content -->
+
+			<div class="reply">
+				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'wpzurb' ), 'after' => ' <span>&darr;</span>', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	<?php
+		break;
+	endswitch; // end comment_type check
+}
+endif;
 
 
 
