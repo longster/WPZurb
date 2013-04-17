@@ -164,8 +164,6 @@ if ( ! function_exists( 'wpzurb_comment' ) ) :
  * simply create your own wpzurb_comment(), and that function will be used instead.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
- *
- * @since Twenty Twelve 1.0
  */
 function wpzurb_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
