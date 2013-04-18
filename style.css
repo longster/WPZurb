@@ -58,10 +58,10 @@ body .button { text-shadow: 0 0 0 black; filter: dropshadow(color=black, offx=0 
 /* Body Content */
 .blog article, .archive article { border-bottom: 1px dotted #e5e5e5; margin-bottom: 2.00em; }
 
-.content { background: white; padding-top: 50px; border-bottom: 1px solid black; }
-.content blockquote { font-family: Georgia, "Times New Roman", Times, serif !important; quotes: "\201C""\201D"; }
-.content article { padding-bottom: 2.0em; }
-.content .sticky.fixed { position: static; }
+#primary { background: white; padding-top: 50px; border-bottom: 1px solid black; }
+#primary blockquote { font-family: Georgia, "Times New Roman", Times, serif !important; quotes: "\201C""\201D"; }
+#primary article { padding-bottom: 2.0em; }
+#primary .sticky.fixed { position: static; }
 
 #sidebar { border-top: 1px solid #eeeeee; padding-top: 20px; }
 

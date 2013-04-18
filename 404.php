@@ -8,7 +8,7 @@
         </div>
     </section>
 
-	<section class="content">
+	<section id="primary">
 		<div class="row">
 			<div class="large-12 columns">
 					<article id="post-0" class="post no-results not-found">

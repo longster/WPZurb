@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<section class="content">
+	<section id="primary">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'loop/content', 'page' ); ?>
 		<?php endwhile; // end of the loop. ?>

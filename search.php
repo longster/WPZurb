@@ -12,7 +12,7 @@
         </div>
     </section>
 
-	<section class="content">
+	<section id="primary">
 
 			<?php if ( have_posts() ) : ?>
 

@@ -20,7 +20,7 @@ get_header(); ?>
 	<?php else: ?>
 	<?php endif; ?>
 
-	<section class="content">
+	<section id="primary">
 
 	<?php if ( have_posts() ) : ?>
 

@@ -68,7 +68,7 @@ get_header(); ?>
         </div>
     </section>
 
-	<section class="content">
+	<section id="primary">
 		<?php if ( have_posts() ) : ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>

@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	
-	<section class="content">
+	<section id="primary">
 		<div class="row">
 			<div class="large-8 columns push-2">
 
