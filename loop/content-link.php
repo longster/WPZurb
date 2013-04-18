@@ -1,4 +1,7 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div class="row">
+			<div class="large-12 columns">
+				
 		<header>
 			<span class="entry-meta-date"><?php echo get_the_date(); ?></span>
 		<?php if ( is_single() ) : ?>
@@ -18,4 +21,7 @@
 		<div class="entry-content">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wpzurb' ) ); ?>
 		</div><!-- .entry-content -->
+		
+			</div>
+		</div>
 	</article><!-- #post -->

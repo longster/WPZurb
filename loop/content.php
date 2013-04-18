@@ -1,4 +1,7 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div class="row">
+			<div class="large-12 columns">
+
 		<header class="entry-header">
 			<span class="entry-meta-date"><?php echo get_the_date(); ?></span>
 		<?php if ( is_single() ) : ?>
@@ -48,4 +51,7 @@
 			</div><!-- .author-info -->
 		</footer><!-- .entry-meta -->
 		<?php endif; ?>
+
+			</div>
+		</div>
 	</article><!-- #post -->

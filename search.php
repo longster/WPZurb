@@ -12,9 +12,7 @@
         </div>
     </section>
 
-<section class="content">
-		<div class="row">
-			<div class="large-9 columns">
+	<section class="content">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -34,21 +32,25 @@
 			<?php else : ?>
 
 				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'wpzurb' ); ?></h1>
-					</header>
+					<div class="row">
+						<div class="large-12 columns">
+							<header class="entry-header">
+								<h1 class="entry-title"><?php _e( 'Nothing Found', 'wpzurb' ); ?></h1>
+							</header>
 
-					<div class="entry-content">
-						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'wpzurb' ); ?></p>
-						<?php get_search_form(); ?>
-					</div><!-- .entry-content -->
+							<div class="entry-content">
+								<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'wpzurb' ); ?></p>
+								<?php get_search_form(); ?>
+							</div><!-- .entry-content -->
+
+						</div><!-- .large-12.columns -->
+					</div><!-- .row -->
 				</article><!-- #post-0 -->
 
 			<?php endif; ?>
+			
+		<?php get_sidebar(); ?>
 
-			</div><!-- .large-9.columns -->
-			<?php get_sidebar(); ?>
-		</div><!-- .row -->
 	</section><!-- .content -->
 
 <?php get_sidebar(); ?>

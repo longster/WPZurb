@@ -69,39 +69,30 @@ get_header(); ?>
     </section>
 
 	<section class="content">
-		<div class="row">
-			<div class="large-9 columns">
-			<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'loop/content', get_post_format() );
-					?>
+				<?php get_template_part( 'loop/content', get_post_format() ); ?>
 
-				<?php endwhile; ?>
+			<?php endwhile; ?>
 
-				<?php /* Display navigation to next/previous pages when applicable */ ?>
-				<?php if ( function_exists('wpzurb_pagination') ) { wpzurb_pagination(); } else if ( is_paged() ) { ?>
-					<nav id="post-nav">
-						<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'wpzurb' ) ); ?></div>
-						<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'wpzurb' ) ); ?></div>
-					</nav>
-				<?php } ?>	
+			<?php /* Display navigation to next/previous pages when applicable */ ?>
+			<?php if ( function_exists('wpzurb_pagination') ) { wpzurb_pagination(); } else if ( is_paged() ) { ?>
+				<nav id="post-nav">
+					<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'wpzurb' ) ); ?></div>
+					<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'wpzurb' ) ); ?></div>
+				</nav>
+			<?php } ?>	
 
-			<?php else : ?>
+		<?php else : ?>
 
-				<?php get_template_part( 'no-results', 'archive' ); ?>
+			<?php get_template_part( 'no-results', 'archive' ); ?>
 
-			<?php endif; ?>
-			</div><!-- .large-9.columns -->
-			<?php get_sidebar(); ?>
-		</div><!-- .row -->
+		<?php endif; ?>
+		
+		<?php get_sidebar(); ?>
+
 	</section><!-- .content -->
 
 <?php get_footer(); ?>

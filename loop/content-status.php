@@ -1,4 +1,7 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div class="row">
+			<div class="large-12 columns">
+
 		<header>
 			<span class="entry-meta-date"><?php echo get_the_date(); ?></span>
 		<?php if ( is_single() ) : ?>
@@ -20,4 +23,7 @@
 			<?php echo get_avatar( get_the_author_meta( 'ID' ), apply_filters( 'twentytwelve_status_avatar', '48' ) ); ?>
 			<?php the_author(); ?>
 		</div><!-- .entry-content -->
+		
+			</div>
+		</div>
 	</article><!-- #post -->

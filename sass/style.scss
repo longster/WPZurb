@@ -227,7 +227,8 @@ a {
 }
 
 /* Body Content */
-.blog article {
+.blog article,
+.archive article {
 	border-bottom: 1px dotted #e5e5e5;
 	margin-bottom: 2.00em;
 }
@@ -235,24 +236,6 @@ a {
 	background: $color-white;
 	padding-top: 50px;
 	border-bottom: 1px solid #000;
-	h1 {
-		font-size: 24px;
-	}
-	h2 {
-		font-size: 22px;
-	}
-	h3{
-		font-size: 20px;
-	}
-	h4{
-		font-size: 18px;
-	}
-	h5{
-		font-size: 16px;
-	}
-	h6 {
-		font-size: 14px;
-	}
 	blockquote {
 		font-family: Georgia, "Times New Roman", Times, serif !important;
 		quotes: "\201C""\201D";
@@ -268,6 +251,11 @@ a {
 	// that conflicts with topbar sticky
 		position: static;
 	}
+}
+
+#sidebar {
+	border-top: 1px solid #eee;
+	padding-top: 20px;
 }
 
 /* Footer */
