@@ -82,8 +82,8 @@ add_action('after_setup_theme', 'wpzurb_theme_support');
 register_sidebar( array(
 		'name' => __( 'Default Sidebar', '' ),
 		'id' => 'sidebar',
-		'before_widget' => '<aside id="%1$s" class="large-3 columns widget %2$s">',
-		'after_widget' => '</aside>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>'
 ) );

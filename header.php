@@ -39,7 +39,7 @@
         <nav class="top-bar">
             <ul class="title-area">
                 <li class="name <?php if ( is_front_page() ) : ?>active<?php endif; ?>">
-                    <h1 class="logo-small"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><a href="#" class="toggle-nav"></a></h1>
+                    <h1><a href="<?php echo home_url( '/' ); ?>" class="logo-small" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><span class="tog"><a href="#" class="toggle-nav"></a></span></h1>
                 </li>
                 <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
             </ul>
@@ -74,17 +74,5 @@
             <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Navdrop')) : ?>
                 Configure at Dashboard > Appearance > Widget > Footer
             <?php endif; ?>
-        </div>
-    </section>
-    
-
-    <section id="identity">
-        <div class="row">
-            <div class="large-12 columns">
-                <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="brand logo">
-                    <h1 class="logo">WP Foundation Framework</h1>
-                    <h3>HTML5Boilerplate + Foundation Zurb + Wireframe</h3>
-                </a>
-            </div>
         </div>
     </section>

@@ -135,8 +135,8 @@
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
-// $hr-border-style: solid;
-// $hr-border-color: #ddd;
+ $hr-border-style: dotted; //solid;
+ $hr-border-color: #e9e9e9; //#ddd;
 // $hr-margin: emCalc(20px);
 
 // We use these to style lists
@@ -678,7 +678,7 @@
 //
 
 // We use these to control the background and border styles
-// $panel-bg: darken(#fff, 5%);
+ $panel-bg: lighten(#fff, 100%); //darken(#fff, 5%);
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
 
@@ -976,10 +976,10 @@
 //
 
 // Background color for the top bar
-// $topbar-bg: #111;
+ $topbar-bg: #f8f8f8;//#111;
 
 // Height and margin
- $topbar-height: 55px; //45px;
+ $topbar-height: 41px; //45px;
 // $topbar-margin-bottom: emCalc(30px);
 
 // Control Input height for top bar
@@ -990,8 +990,8 @@
 // $topbar-title-font-size: emCalc(17px);
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
-// $topbar-link-weight: bold;
+ $topbar-link-color: #333;
+ $topbar-link-weight: normal; //bold;
 // $topbar-link-font-size: emCalc(13px);
 
 // Style the top bar dropdown elements
@@ -1006,8 +1006,8 @@
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: emCalc(13px);
 // $topbar-menu-link-weight: bold;
-// $topbar-menu-link-color: #fff;
-// $topbar-menu-icon-color: #fff;
+ $topbar-menu-link-color: #333; //#fff;
+ $topbar-menu-icon-color: #333; //#fff;
 // $topbar-menu-link-color-toggled: #888;
 // $topbar-menu-icon-color-toggled: #888;
 

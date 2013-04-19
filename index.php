@@ -10,13 +10,13 @@
 get_header(); ?>
 
 	<?php if(!is_front_page() && is_home('docs')) : ?>
-    <section id="the-title">
+    <header id="the-title">
         <div class="row">
             <div class="large-12 columns">
                 <h1>Docs</h1>
             </div>
         </div>
-    </section>
+    </header>
 	<?php else: ?>
 	<?php endif; ?>
 
