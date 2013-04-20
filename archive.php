@@ -70,10 +70,9 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
-
 				<?php get_template_part( 'loop/content', get_post_format() ); ?>
-
 			<?php endwhile; ?>
+			
 
 			<?php /* Display navigation to next/previous pages when applicable */ ?>
 			<?php if ( function_exists('wpzurb_pagination') ) { wpzurb_pagination(); } else if ( is_paged() ) { ?>

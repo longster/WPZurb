@@ -52,25 +52,28 @@ a {
 		@include global-custom-radius(3px,0px,0px,3px);
 		//border-left: 1px solid #2b2b2b;
 		//@include global-box-shadows(-1px 0 0 0 #000);
+		@extend %easetransition;
 		&:hover {
-			background-color: #2ba6cb;
+			background-color: #2284A2;
 		}
 	}	
 
 	.tog {
 		background-image: none;
-		background-color: #333;
+		//background-color: #eee;
 		margin-left: 1px;
 		@include global-custom-radius(0px,3px,3px,0px);
 	}
 
 	.active {
 		.logo-small, .tog {
-			background-color: #2ba6cb;
+			background-color: #222;
 			@extend %easetransition;
 			&:hover {
 				background-color: #2284A2;
 			}
+		}
+		.tog {
 		}
 	}
 
@@ -141,17 +144,19 @@ a {
 			color: #2ba6cb;
 		 }
 		.dropdown {
-			background: #333;
-			@include global-box-shadows(0px 2px 3px 0px rgba(0, 0, 0, 1));
+			background: #f8f8f8;
+			@include global-box-shadows(0px 2px 3px 0px rgba(0, 0, 0, .35));
 			li {
-				border-bottom: 1px solid #444;
+				border-bottom: 1px solid #e7e7e7;
 			} 
 			a {
 				padding: 15px;
 			}	
 		}
-		.has-dropdown > a:after {
-			margin-top: .5px;
+		.has-dropdown > a:after { // arrow down down position and color
+			margin-top: -3px;
+			border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;
+			border-top-color: rgba(0, 0, 0, 0.498039);
 		}
 
 		.has-form {
@@ -284,12 +289,16 @@ a {
 }
 
 #sidebar {
-	.panel {
-		border-top: 0;
-		border-right: 0;
-		border-bottom: 0;
+		border: 0;
 		margin-bottom: 0;
-	}
+		border-left: 1px solid $color-lt-gray;
+		border-right: 0;
+		padding-top: 1.8em;
+		padding-bottom: 1.8em;
+		&.side-lt {
+			border-right: 1px solid $color-lt-gray;
+			border-left: 0;
+		}
 }
 
 /* Footer */
@@ -414,7 +423,7 @@ a img.aligncenter {
 }
 
 .comments-link {
-	float: r
+	float: right;
 }
 
 .entry-meta {
@@ -430,6 +439,10 @@ a img.aligncenter {
 			color: #2BA6CB;
 		}
 	}
+}
+.entry-header img {
+	width: 100%;
+	margin-bottom: 1.0em;
 }
 .entry-meta-date {
 	color: #999;

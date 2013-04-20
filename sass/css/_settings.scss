@@ -991,14 +991,14 @@
 
 // Set the link colors and styles for top-level nav
  $topbar-link-color: #333;
- $topbar-link-weight: normal; //bold;
+// $topbar-link-weight: bold;
 // $topbar-link-font-size: emCalc(13px);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
-// $topbar-dropdown-link-color: #fff;
+ $topbar-dropdown-bg: #f8f8f8; //#333;
+ $topbar-dropdown-link-color: #333; //#fff;
 // $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: #fff;
+ $topbar-dropdown-toggle-color: #2ba6cb;//#fff;
 // $topbar-dropdown-toggle-alpha: 0.5;
 // $dropdown-label-color: #555;
 

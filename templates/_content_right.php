@@ -1,7 +1,7 @@
 <?php
 /** _content_right.php
  *
- * Template Name: Content Right Side
+ * Template Name: Sidebar left | Content Right 
  */
 get_header(); ?>
 
@@ -15,12 +15,15 @@ get_header(); ?>
 
 	<section id="primary">
 		<div class="row">
-			<div class="large-9 columns push-3">
+			<div class="large-8 columns push-4">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'loop/content', 'page' ); ?>
 			<?php endwhile; // end of the loop. ?>
 			</div>
-			<?php get_sidebar(); ?>
+
+			<aside id="sidebar" class="large-4 columns pull-8 side-lt">
+					<?php get_sidebar(); ?>
+			</aside>	
 		</div>
 	</section>
 

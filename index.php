@@ -71,8 +71,6 @@ get_header(); ?>
 			</nav>
 		<?php } ?>	
 
-		<?php get_sidebar(); ?>
-
 	</section>
 	
 
