@@ -9,7 +9,7 @@
 		<?php else : ?>
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'wpzurb' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php _e( 'Link', 'wpzurb' ); ?>: <?php the_title(); ?></a></h1>
 		<?php endif; // is_single() ?>
-			<div class="entry-meta">
+			<div class="entry-meta hide">
 				<?php wpzurb_entry_meta(); ?>
 			<?php if ( comments_open() ) : ?>
 				<div class="comments-link right">
