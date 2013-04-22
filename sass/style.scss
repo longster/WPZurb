@@ -28,9 +28,6 @@ a {
 #masthead {
 	border-bottom: 1px solid #e7e7e7;
 	@include global-text-shadows(0, 1px, 0, #fff);
-
-	input[type="text"]#search {
-	}
 	
 	.top-bar {
 		background: none;
@@ -70,6 +67,10 @@ a {
 		}
 	}
 
+	.active a {
+		color: #2ba6cb;
+	}
+
 	a {
 		font-weight: normal;
 		font-size: .9em;
@@ -102,10 +103,6 @@ a {
 			opacity: .9;
 		}
 	}
-	.active a {
-		//background: none;
-		color: #2ba6cb;
-	}
 
 	.menu-fallback {
 		color: $color-white;
@@ -126,7 +123,6 @@ a {
 			border-left: 0;
 		}
 		a:not(.button) {
-			//@include filter-gradient(#353535, #232323);
 			@extend %texttransition;
 			background: none;
 			.active & {
@@ -234,7 +230,6 @@ a {
 .blog article,
 .archive article {
 	border-bottom: 1px dotted #e5e5e5;
-	//margin-bottom: 2.00em;
 }
 
 #the-title {
@@ -251,7 +246,6 @@ a {
 	background: $color-white;
 	blockquote {
 		border-left: 0;
-		//padding: 0 1.5em;
 		font-size: 1.6em;
 		p {
 			font-family: Georgia, "Times New Roman", Times, serif !important;
@@ -313,12 +307,12 @@ a {
 
 	.aside-footer {
 		border-top: 1px solid #444;
+		border-bottom: 1px solid #444;	
 		padding: 20px 0 10px 0;
 		margin: 30px 0 0;
 		background: #303030;
 	}
 	.credit {
-		border-top: 1px solid #444;	
 		padding: 10px 0 30px;
 	}
 	h5 {

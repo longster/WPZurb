@@ -14,6 +14,8 @@
 
 	<section id="primary">
 
+		<div class="row">
+			<div class="large-8 columns">
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -28,28 +30,30 @@
 						<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'wpzurb' ) ); ?></div>
 					</nav>
 				<?php } ?>	
+			</div>
+
+			<aside id="sidebar" class="large-4 columns">
+					<?php get_sidebar(); ?>
+			</aside>
 
 			<?php else : ?>
 
 				<article id="post-0" class="post no-results not-found">
-					<div class="row">
-						<div class="large-12 columns">
-							<header class="entry-header">
-								<h1 class="entry-title"><?php _e( 'Nothing Found', 'wpzurb' ); ?></h1>
-							</header>
+					<div class="large-12 columns">
+						<header class="entry-header">
+							<h1 class="entry-title"><?php _e( 'Nothing Found', 'wpzurb' ); ?></h1>
+						</header>
 
-							<div class="entry-content">
-								<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'wpzurb' ); ?></p>
-								<?php get_search_form(); ?>
-							</div><!-- .entry-content -->
+						<div class="entry-content">
+							<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'wpzurb' ); ?></p>
+							<?php get_search_form(); ?>
+						</div><!-- .entry-content -->
 
-						</div><!-- .large-12.columns -->
-					</div><!-- .row -->
+					</div><!-- .large-12.columns -->
 				</article><!-- #post-0 -->
-
 			<?php endif; ?>
-			
-		<?php get_sidebar(); ?>
+		
+		</div>
 
 	</section><!-- .content -->
 
