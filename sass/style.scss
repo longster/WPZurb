@@ -250,11 +250,19 @@ a {
 #primary {
 	background: $color-white;
 	blockquote {
-		font-family: Georgia, "Times New Roman", Times, serif !important;
+		border-left: 0;
+		//padding: 0 1.5em;
+		font-size: 1.6em;
+		p {
+			font-family: Georgia, "Times New Roman", Times, serif !important;
+		}
 	}
 	article {
 		padding-bottom: 2.0em;
 		padding-top: 2.0em;
+	}
+	.entry-title {
+		margin-bottom: .2em;
 	}
 	.sticky {
 	}
@@ -266,6 +274,14 @@ a {
 	}
 	.page-numbers {
 		margin-bottom: 0;
+	}
+}
+.entry-content {
+	.format-quote & {
+		margin: 0 auto;
+		blockquote {
+			padding: 0;
+		}
 	}
 }
 
@@ -437,4 +453,6 @@ a img.aligncenter {
 	color: #999;
 	font-size: 11px;
 	text-transform: uppercase;
+	position: relative;
+	top: 12px;
 }

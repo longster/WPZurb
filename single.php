@@ -15,6 +15,9 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'loop/content', get_post_format() ); ?>
 		<?php endwhile; // end of the loop. ?>
+
+			<?php comments_template( '', true ); ?>
+			
 			</div>
 
 			<aside id="sidebar" class="large-4 columns">
@@ -24,6 +27,5 @@
 		</div>
 	</section>
 
-	<?php comments_template( '', true ); ?>
 
 <?php get_footer(); ?>

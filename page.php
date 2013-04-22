@@ -12,8 +12,10 @@
 		<div class="row">
 			<div class="large-8 columns">
 			<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'loop/content', 'page' ); ?>
+				<?php get_template_part( 'loop/content', 'page' ); ?>
 			<?php endwhile; // end of the loop. ?>
+		
+				<?php comments_template( '', true ); ?>
 			</div>
 
 			<aside id="sidebar" class="large-4 columns">
@@ -21,6 +23,5 @@
 			</aside>	
 		</div>
 	</section>
-		
 
 <?php get_footer(); ?>

@@ -62,11 +62,16 @@ body .button { text-shadow: 0 0 0 black; filter: dropshadow(color=black, offx=0 
 #the-title h1 { font-size: 3.2em; margin: 0.2em 0; }
 
 #primary { background: white; }
-#primary blockquote { font-family: Georgia, "Times New Roman", Times, serif !important; }
+#primary blockquote { border-left: 0; font-size: 1.6em; }
+#primary blockquote p { font-family: Georgia, "Times New Roman", Times, serif !important; }
 #primary article { padding-bottom: 2.0em; padding-top: 2.0em; }
+#primary .entry-title { margin-bottom: .2em; }
 #primary .sticky.fixed { position: static; }
 #primary .pagination-centered { padding: 1.5em 0; }
 #primary .page-numbers { margin-bottom: 0; }
+
+.format-quote .entry-content { margin: 0 auto; }
+.format-quote .entry-content blockquote { padding: 0; }
 
 #comments { border-top: 1px solid #e5e5e5; background-color: #fff; }
 
@@ -123,4 +128,4 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
 .entry-header img { width: 100%; margin-bottom: 1.0em; }
 
-.entry-meta-date { color: #999; font-size: 11px; text-transform: uppercase; }
+.entry-meta-date { color: #999; font-size: 11px; text-transform: uppercase; position: relative; top: 12px; }
