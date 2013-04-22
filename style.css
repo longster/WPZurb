@@ -15,7 +15,7 @@ a, #masthead .top-bar-section a:not(.button) { -webkit-transition: color 0.2s ea
 #masthead .logo-small, #masthead .tog, #masthead .active .logo-small, #masthead .active .tog, #masthead a.toggle-nav { -webkit-transition: all 500ms ease-in-out; -moz-transition: all 500ms ease-in-out; -o-transition: all 500ms ease-in-out; -ms-transition: all 500ms ease-in-out; }
 
 /* General Framework */
-body { background: #353535; text-shadow: 0 1px 0 white; filter: dropshadow(color=white, offx=0 offy=1px); }
+body { text-shadow: 0 1px 0 white; filter: dropshadow(color=white, offx=0 offy=1px); }
 body .button { text-shadow: 0 0 0 black; filter: dropshadow(color=black, offx=0 offy=0); }
 
 /* Top bar navigation */
@@ -46,14 +46,14 @@ body .button { text-shadow: 0 0 0 black; filter: dropshadow(color=black, offx=0 
 
 #identity { border-bottom: 1px solid #e5e5e5; background: white; }
 #identity a.brand.logo { padding: 10px 0 10px 100px; margin-bottom: 0; display: inline-block; background: url(img/logo-wpf.png) no-repeat left center; }
-#identity h1 { font-family: "Russo One", sans-serif !important; color: #353535; font-size: 35px; margin-bottom: 0; padding-top: 24px; line-height: 24px; }
-#identity h3 { font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif !important; color: #353535; font-weight: lighter; font-size: 24.5px; }
+#identity h1 { font-family: "Russo One", sans-serif !important; color: #3a3a3a; font-size: 35px; margin-bottom: 0; padding-top: 24px; line-height: 24px; }
+#identity h3 { font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif !important; color: #3a3a3a; font-weight: lighter; font-size: 24.5px; }
 
 #navdrop { padding: 20px 0; display: none; background: white; border-bottom: 1px solid #e5e5e5; }
 
 .hero-unit { padding: 25px 0 0 0; max-width: 100%; }
-.hero-unit h1 { font-family: "Russo One", sans-serif !important; font-size: 6.3em; line-height: 1em; margin-bottom: 0; color: #353535; }
-.hero-unit h2 { font-weight: lighter; font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-size: 3.0em; line-height: 1.2em; color: #353535; }
+.hero-unit h1 { font-family: "Russo One", sans-serif !important; font-size: 6.3em; line-height: 1em; margin-bottom: 0; color: #3a3a3a; }
+.hero-unit h2 { font-weight: lighter; font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-size: 3.0em; line-height: 1.2em; color: #3a3a3a; }
 
 /* Body Content */
 .blog article, .archive article { border-bottom: 1px dotted #e5e5e5; margin-bottom: 2.00em; }
@@ -61,19 +61,20 @@ body .button { text-shadow: 0 0 0 black; filter: dropshadow(color=black, offx=0 
 #the-title { background: #fff; border-bottom: 1px solid #e5e5e5; padding: 5px 0; }
 #the-title h1 { font-size: 3.2em; margin: 0.2em 0; }
 
-#primary { background: white; border-bottom: 1px solid black; }
-#primary blockquote { font-family: Georgia, "Times New Roman", Times, serif !important; quotes: "\201C""\201D"; }
+#primary { background: white; }
+#primary blockquote { font-family: Georgia, "Times New Roman", Times, serif !important; }
 #primary article { padding-bottom: 2.0em; padding-top: 2.0em; }
 #primary .sticky.fixed { position: static; }
-#primary #comment { border-top: 1px solid #e9e9e9; }
+
+#comments { border-top: 1px solid #e5e5e5; background-color: #fff; }
 
 #sidebar { border: 0; margin-bottom: 0; border-left: 1px solid #e5e5e5; border-right: 0; padding-top: 1.8em; padding-bottom: 1.8em; }
 #sidebar.side-lt { border-right: 1px solid #e5e5e5; border-left: 0; }
 
 /* Footer */
-#colophon { text-shadow: 0 -1px 0 black; filter: dropshadow(color=black, offx=0 offy=-1px); color: #777; margin: 30px 0; }
-#colophon .aside-footer { margin-bottom: 10px; }
-#colophon .credit { border-top: 1px solid #444444; padding-top: 30px; }
+#colophon { text-shadow: 0 -1px 0 black; filter: dropshadow(color=black, offx=0 offy=-1px); color: #777; border-top: 1px solid black; -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25); box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25); }
+#colophon .aside-footer { border-top: 1px solid #444444; padding: 20px 0 10px 0; margin: 30px 0 0; background: #303030; }
+#colophon .credit { border-top: 1px solid #444444; padding: 10px 0 30px; }
 #colophon h5 { color: #777; }
 #colophon .menu-fallback { float: right; font-size: 10px; padding: 0 10px; background: none; }
 #colophon ul.right.inline-list { font-size: 10px; }

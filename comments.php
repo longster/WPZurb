@@ -21,7 +21,9 @@
 		return;
 ?>
 
-	<div id="comments" class="comments-area">
+	<section id="comments" class="comments-area">
+		<div class="row">
+			<div class="large-12 columns">
 
 	<?php // You can start editing here -- including this comment! ?>
 
@@ -72,4 +74,6 @@
 
 	<?php comment_form(); ?>
 
-</div><!-- #comments -->
+			</div>
+		</div>
+	</section><!-- #comments -->

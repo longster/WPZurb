@@ -24,12 +24,6 @@
 		</div>
 	</section>
 
-	<section style="background-color: #fff;">
-		<div class="row">
-			<div class="large-12 columns">
-				<?php comments_template( '', true ); ?>
-			</div>
-		</div>
-	</section>
+	<?php comments_template( '', true ); ?>
 
 <?php get_footer(); ?>

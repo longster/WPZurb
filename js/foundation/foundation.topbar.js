@@ -184,7 +184,7 @@
       if ($(klass).length > 0) {
         var distance = $(klass).length ? $(klass).offset().top: 0,
             $window = $(window);
-            var offst = this.outerHeight($('nav.top-bar'))+20;
+            var offst = this.outerHeight($('nav.top-bar'))+1; //original offset number is 20
 
           $window.scroll(function() {
             if ($window.scrollTop() >= (distance)) {
