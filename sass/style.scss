@@ -234,7 +234,7 @@ a {
 .blog article,
 .archive article {
 	border-bottom: 1px dotted #e5e5e5;
-	margin-bottom: 2.00em;
+	//margin-bottom: 2.00em;
 }
 
 #the-title {
@@ -260,6 +260,12 @@ a {
 	}
 	.sticky.fixed { 
 		position: static;
+	}
+	.pagination-centered {
+		padding: 1.5em 0;
+	}
+	.page-numbers {
+		margin-bottom: 0;
 	}
 }
 
