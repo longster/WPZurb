@@ -14,28 +14,29 @@
 		<link rel="stylesheet" href="../css/app.css" />
 		<link rel="stylesheet" href="../style.css" />
         
-        <script src="js/vendor/custom.modernizr.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+        <script src="../js/vendor/custom.modernizr.js"></script>
 
+	</head>
+	<body>
+	    <!--[if lt IE 8]>
+	        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+	    <![endif]-->
 
         <section id="masthead"  class="contain-to-grid sticky">
 	        <nav class="top-bar">
 	        	<ul class="title-area">
-	        		<li class="name active">
+	        		<li class="name">
 				    	<h1 class="logo-small"><a href="index.htm">WPFoundationZurb</a></h1>
 				    </li>
-				    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+				    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+	    			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 	        	</ul>
 
 	        	<section class="top-bar-section">
 				    <!-- Left Nav Section -->
 				    <ul class="left">
 				      	<li class="divider"></li>
-				     	<li><a href="page.htm">Page Blog</a></li>
+				     	<li class="active"><a href="page.htm">Page Blog</a></li>
 				      	<li class="divider"></li>
 				      	<li><a href="page-block.htm">Page Block</a></li>
 				      	<li class="divider"></li>
@@ -97,76 +98,58 @@
 		</section>
 
 
-        <section class="identity">
+	    <section id="identity">
+	        <div class="row">
+	            <div class="large-12 columns">
+	                <a href="index.htm" title="WPZurb" rel="home" class="brand logo">
+	                    <h1 class="logo">WP Foundation Framework</h1>
+	                    <h3>HTML5Boilerplate + Foundation Zurb + Wireframe</h3>
+	                </a>
+	            </div>
+	        </div>
+	    </section>
+
+		<section id="primary">
+			<section class="hero-unit "> 
+		        <div class="row">
+		            <div class="large-12 columns">
+		                <h1>WPFoundation</h1>
+		                <h2>A Free Mobile First Wordpress Theme Framework Based on Foundation Zurb + HTML5BoilerPlate. </h2>
+		            </div>
+		        </div>
+		        <div class="row">
+		            <div class="large-4 columns">
+		                <a href="https://github.com/longster/WPZurb/archive/master.zip" class="small button large-4 expand radius"> Download WPZurb</a>
+		            </div>
+		            <div class="large-4 columns">
+		                <a href="https://github.com/longster/WPZurb" class="small button large-4 expand radius" target="_blank">View Project on Github</a>
+		            </div>
+		            <div class="large-4 columns">
+		                <a href="https://github.com/longster/WPZurb/fork" class="small button large-4 expand radius">Fork Me</a>
+		            </div>
+		        </div>
+		    </section>
+
+		    <br/><br/>
+		    <hr/>    
+		        <h2 class="text-center">Designed for everyone, everywhere</h2>   
+		     <hr/>
+		    <br/>
+	    
 		    <div class="row">
-				<div class="large-12 columns">
-					<a href="index.htm" class="brand logo">
-						<h1 class="logo">WP Foundation Framework</h1>
-                    	<h3>HTML5Boilerplate + Foundation Zurb + Wireframe</h3>
-                    </a>
-				</div>
-			</div>
-        </section>
-
-        <section class="hero-unit">            
-            <div class="full-width">
-	            <div class="row">
-	            	<div class="large-12 columns">
-	                	<h1>WPFoundation</h1>
-	                	<h2>A Free Mobile First Wordpress Theme Framework Based on Foundation Zurb + HTML5BoilerPlate. </h2>
-	            	</div>
-	            </div>
-	            <div class="row">
-	            	<div class="large-4 columns">
-	            		<a class="small button large-4 expand radius"> WP Foundation</a>
-	            	</div>
-	            	<div class="large-4 columns">
-	            		<a class="small button large-4 expand radius">View Project on Github</a>
-	            	</div>
-	            	<div class="large-4 columns">
-	            		<a class="small button large-4 expand radius">Fork Me</a>
-	            	</div>
-	            </div>
-            </div>
-        </section>
-
-        <section class="content"> 
-			<div class="row">
-				<div class="large-6 columns">
-					<h2>Foundation from Zurb</h2>
-					<p>Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions. Foundation is one of the most complete front-end toolkits out there with dozens of fully functional components ready to be put to use.</p>
-					<a href="#" class="small button radius">Foundation from Zurb</a>
-				</div>
-				<div class="large-6 columns">
-					<h2>HTML5 Boilerplate</h2>
-					<p>HTML5 Boilerplate is the professional frontend developers’s base HTML/CSS/JS template for a fast, robust and future-safe site. You get the best of the best practices baked in: cross-browser normalization, performance optimizations, and things you don’t have to worry about.</p>
-					<a href="#" class="small button radius">HTML5 Boilerplate</a>
-				</div>
-			</div>
-
-			<div class="row quote">
-				<div class="large-12 columns">
-					<hr/>
-					<h2 class="text-center">Designed for everyone, everywhere</h2>
-					<hr/>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="large-4 columns">
-					<h2>Mobile First</h2>
-					<p>Cursus elit in mattis, turpis adipiscing, urna, lacus mattis, ultrices odio augue enim enim mus sit? Eros in, montes etiam enim tincidunt phasellus parturient! Dapibus. </p>
-				</div>
-				<div class="large-4 columns">
-					<h2>Semantic</h2>
-					<p>Cursus elit in mattis, turpis adipiscing, urna, lacus mattis, ultrices odio augue enim enim mus sit? Eros in, montes etiam enim tincidunt phasellus parturient! Dapibus. </p>
-				</div>
-				<div class="large-4 columns">
-					<h2>Javascript</h2>
-					<p>Cursus elit in mattis, turpis adipiscing, urna, lacus mattis, ultrices odio augue enim enim mus sit? Eros in, montes etiam enim tincidunt phasellus parturient! Dapibus. </p>
-				</div>
-			</div>
+		        <div class="large-6 columns">
+		            <h2>Foundation from Zurb</h2>
+		            <p>Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions. Foundation is one of the most complete front-end toolkits out there with dozens of fully functional components ready to be put to use.</p>
+		            <a href="http://foundation.zurb.com" class="small button radius" target="_blank">Foundation from Zurb</a>
+		        </div>
+		        <div class="large-6 columns">
+		            <h2>HTML5 Boilerplate</h2>
+		            <p>HTML5 Boilerplate is the professional frontend developers’s base HTML/CSS/JS template for a fast, robust and future-safe site. You get the best of the best practices baked in: cross-browser normalization, performance optimizations, and things you don’t have to worry about.</p>
+		            <a href="http://html5boilerplate.com" class="small button radius" target="_blank">HTML5 Boilerplate</a>
+		        </div>
+		    </div>
 		</section>
+
 
 		<footer id="colophon">
 			<div class="row">
@@ -176,29 +159,43 @@
 			</div>
 		</footer>
 
-        
-	  	<script>
-	  		document.write('<script src=' +
-	  		('__proto__' in {} ? '../js/vendor/zepto' : '../js/vendor/jquery') +
-	  		'.js><\/script>')
-	  	</script>
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
   
-  		<script src="../js/foundation/foundation.js"></script>
-		<script src="../js/foundation/foundation.alerts.js"></script>
-		<script src="../js/foundation/foundation.clearing.js"></script>
-		<script src="../js/foundation/foundation.cookie.js"></script>
-		<script src="../js/foundation/foundation.dropdown.js"></script>
-		<script src="../js/foundation/foundation.forms.js"></script>
-		<script src="../js/foundation/foundation.joyride.js"></script>
-		<script src="../js/foundation/foundation.magellan.js"></script>
-		<script src="../js/foundation/foundation.orbit.js"></script>
-		<script src="../js/foundation/foundation.placeholder.js"></script>
-		<script src="../js/foundation/foundation.reveal.js"></script>
-		<script src="../js/foundation/foundation.section.js"></script>
-		<script src="../js/foundation/foundation.tooltips.js"></script>
-		<script src="../js/foundation/foundation.topbar.js"></script>
-	  	<script>
-	    	$(document).foundation();
-	  	</script>
-    </body>
+  <script src="../js/foundation/foundation.js"></script>
+	
+	<script src="../js/foundation/foundation.alerts.js"></script>
+	
+	<script src="../js/foundation/foundation.clearing.js"></script>
+	
+	<script src="../js/foundation/foundation.cookie.js"></script>
+	
+	<script src="../js/foundation/foundation.dropdown.js"></script>
+	
+	<script src="../js/foundation/foundation.forms.js"></script>
+	
+	<script src="../js/foundation/foundation.joyride.js"></script>
+	
+	<script src="../js/foundation/foundation.magellan.js"></script>
+	
+	<script src="../js/foundation/foundation.orbit.js"></script>
+	
+	<script src="../js/foundation/foundation.placeholder.js"></script>
+	
+	<script src="../js/foundation/foundation.reveal.js"></script>
+	
+	<script src="../js/foundation/foundation.section.js"></script>
+	
+	<script src="../js/foundation/foundation.tooltips.js"></script>
+	
+	<script src="../js/foundation/foundation.topbar.js"></script>
+	
+  
+  <script>
+    $(document).foundation();
+  </script>
+</body>
 </html>
