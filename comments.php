@@ -21,13 +21,15 @@
 		return;
 ?>
 
-	<section id="comments" class="comments-area">
-		<div class="row">
-			<div class="large-12 columns">
 
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
+
+	<section id="comments" class="comments-area">
+		<div class="row">
+			<div class="large-12 columns">
+
 		<h2 class="comments-title">
 			<?php
 				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'wpzurb' ),
@@ -61,7 +63,12 @@
 			<div class="previous"><?php previous_comments_link( __( '&larr; Older Comments', 'wpzurb' ) ); ?></div>
 			<div class="next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'wpzurb' ) ); ?></div>
 		</nav><!-- #comment-nav-below -->
+
 		<?php endif; // check for comment navigation ?>
+
+			</div>
+		</div>
+	</section><!-- #comments -->
 
 	<?php endif; // have_comments() ?>
 
@@ -69,11 +76,15 @@
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'wpzurb' ); ?></p>
-	<?php endif; ?>
+	<section id="comments" class="comments-area">
+		<div class="row">
+			<div class="large-12 columns">
 
-	<?php comment_form(); ?>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'wpzurb' ); ?></p>
 
 			</div>
 		</div>
 	</section><!-- #comments -->
+	<?php endif; ?>
+
+	<?php comment_form(); ?>

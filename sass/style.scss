@@ -19,6 +19,9 @@ body {
     	@include global-text-shadows(0, 0, 0, #000);
 	}
 }
+html, body {
+	height: 100%;
+}
 a {
 	@extend %texttransition;
 }
@@ -286,12 +289,12 @@ a {
 }
 
 #sidebar {
-	border: 0;
 	margin-bottom: 0;
 	border-left: 1px solid $color-lt-gray;
 	border-right: 0;
 	padding-top: 1.8em;
 	padding-bottom: 1.8em;
+	height: 10%;
 	&.side-lt {
 		border-right: 1px solid $color-lt-gray;
 		border-left: 0;

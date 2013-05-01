@@ -64,7 +64,7 @@
 	$(document).foundation();
 	</script>
 
-	<script src="<?php bloginfo( 'template_url' );?>/js/nav-toggle.js"></script>
+	<script src="<?php bloginfo( 'template_url' );?>/js/wpzurb.js"></script>
 
 	<?php wp_footer(); ?>
 

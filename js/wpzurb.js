@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+	//expand & collapse sub menu bar
 	(function(a){
 		a(function(){
 			a(".toggle-nav").on("click",function(b){
@@ -10,4 +12,8 @@ $(document).ready(function(){
 			)}
 		)}
 	)(jQuery);
+
+	//set sidebar to to match the document height
+	document.getElementById('sidebar').style.height = $(document).height() - 400 + "px";
+
 }); 
