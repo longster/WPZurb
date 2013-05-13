@@ -12,15 +12,13 @@ Version: 1.5
 @import "css/custom";
 
 /* General Framework */
+html {background-color: #3a3a3a;}
 body {
 	@include global-text-shadows(0, 1px, 0, #fff);
 	
 	.button {
     	@include global-text-shadows(0, 0, 0, #000);
 	}
-}
-html, body {
-	height: 100%;
 }
 a {
 	@extend %texttransition;

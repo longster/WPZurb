@@ -49,7 +49,7 @@ get_header(); ?>
     <div class="row">
         <div class="large-6 columns">
             <h2>Foundation from Zurb</h2>
-            <p>Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions. Foundation is one of the most complete front-end toolkits out there with dozens of fully functional components ready to be put to use.</p>
+            <p>Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions. Foundation is one of the most complete front-end toolkits out there with dozens of fully functional components ready to be put to use. Version 4.1.6</p>
             <a href="http://foundation.zurb.com" class="small button radius" target="_blank">Foundation from Zurb</a>
         </div>
         <div class="large-6 columns">
