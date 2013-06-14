@@ -305,6 +305,7 @@ a {
 	color: #777;
 	border-top: 1px solid #000;
 	@include global-box-shadows(inset 0px 1px 0px 0px rgba(255, 255, 255, .25));
+	background-color: #3a3a3a;
 
 	.aside-footer {
 		border-top: 1px solid #444;

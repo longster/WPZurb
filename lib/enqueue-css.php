@@ -6,7 +6,7 @@ if you use vanilla CSS.
 function wpzurb_css_style()
 {	
 	// Normalize stylesheet
-	wp_register_style( 'wpzurb-normalize-stylesheet', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '' );
+	//wp_register_style( 'wpzurb-normalize-stylesheet', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '' );
 	
 	// Foundation stylesheet
 	wp_register_style( 'wpzurb-foundation-stylesheet', get_stylesheet_directory_uri() . '/css/foundation.css', array(), '' );	
