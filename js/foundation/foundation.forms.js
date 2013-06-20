@@ -4,11 +4,7 @@
   Foundation.libs.forms = {
     name: 'forms',
 
-<<<<<<< HEAD
     version: '4.2.2',
-=======
-    version: '4.1.6',
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
 
     cache: {},
 
@@ -37,13 +33,9 @@
     },
 
     assemble: function () {
-<<<<<<< HEAD
       $('form.custom input[type="radio"]', $(this.scope))
         .not('[data-customforms="disabled"]')
         .not('.' + this.settings.disable_class)
-=======
-      $('form.custom input[type="radio"]', $(this.scope)).not('[data-customforms="disabled"]')
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
         .each(this.append_custom_markup);
       $('form.custom input[type="checkbox"]', $(this.scope))
         .not('[data-customforms="disabled"]')
@@ -51,10 +43,7 @@
         .each(this.append_custom_markup);
       $('form.custom select', $(this.scope))
         .not('[data-customforms="disabled"]')
-<<<<<<< HEAD
         .not('.' + this.settings.disable_class)
-=======
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
         .not('[multiple=multiple]')
         .each(this.append_custom_select);
     },
@@ -73,21 +62,13 @@
           e.stopPropagation();
           self.toggle_radio($(this));
         })
-<<<<<<< HEAD
         .on('change.fndtn.forms', 'form.custom select', function (e, force_refresh) {
           if (!$(this).not('[data-customforms="disabled"])')) return;
-=======
-        .on('change.fndtn.forms', 'form.custom select:not([data-customforms="disabled"])', function (e, force_refresh) {
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
           self.refresh_custom_select($(this), force_refresh);
         })
         .on('click.fndtn.forms', 'form.custom label', function (e) {
           if ($(e.target).is('label')) {
-<<<<<<< HEAD
             var $associatedElement = $('#' + self.escape($(this).attr('for'))).not('[data-customforms="disabled"]'),
-=======
-            var $associatedElement = $('#' + self.escape($(this).attr('for')) + ':not([data-customforms="disabled"])'),
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
               $customCheckbox,
               $customRadio;
 
@@ -96,11 +77,7 @@
                 e.preventDefault();
                 $customCheckbox = $(this).find('span.custom.checkbox');
                 //the checkbox might be outside after the label or inside of another element
-<<<<<<< HEAD
                 if ($customCheckbox.length === 0) {
-=======
-                if ($customCheckbox.length == 0) {
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
                   $customCheckbox = $associatedElement.add(this).siblings('span.custom.checkbox').first();
                 }
                 self.toggle_checkbox($customCheckbox);
@@ -108,11 +85,7 @@
                 e.preventDefault();
                 $customRadio = $(this).find('span.custom.radio');
                 //the radio might be outside after the label or inside of another element
-<<<<<<< HEAD
                 if ($customRadio.length === 0) {
-=======
-                if ($customRadio.length == 0) {
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
                   $customRadio = $associatedElement.add(this).siblings('span.custom.radio').first();
                 }
                 self.toggle_radio($customRadio);
@@ -246,22 +219,14 @@
       this.settings.init = true;
     },
 
-<<<<<<< HEAD
     go_to: function (dropdown, character) {
-=======
-    go_to: function (dropdown, char) {
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
       var lis = dropdown.find('li'),
           count = lis.length;
 
       if (count > 0) {
         for (var i = 0; i < count; i++) {
           var first_letter = lis.eq(i).text().charAt(0).toLowerCase();
-<<<<<<< HEAD
           if (first_letter === String.fromCharCode(character).toLowerCase()) return lis.eq(i);
-=======
-          if (first_letter === String.fromCharCode(char).toLowerCase()) return lis.eq(i);
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
         }
       }
     },
@@ -317,34 +282,20 @@
             $listItems,
             $currentSelect = false;
 
-<<<<<<< HEAD
-=======
-        if ($this.hasClass(self.settings.disable_class)) return;
-
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
         if ($customSelect.length === 0) {
           var customSelectSize = $this.hasClass('small') ? 'small' : $this.hasClass('medium') ? 'medium' : $this.hasClass('large') ? 'large' : $this.hasClass('expand') ? 'expand' : '';
 
           $customSelect = $('<div class="' + ['custom', 'dropdown', customSelectSize].concat(copyClasses).filter(function (item, idx, arr) {
-<<<<<<< HEAD
             if (item === '') return false;
             return arr.indexOf(item) === idx;
-=======
-            if (item == '') return false;
-            return arr.indexOf(item) == idx;
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
           }).join(' ') + '"><a href="#" class="selector"></a><ul /></div>');
 
           $selector = $customSelect.find(".selector");
           $customList = $customSelect.find("ul");
 
           liHtml = $options.map(function () {
-<<<<<<< HEAD
             var copyClasses = $(this).attr('class') ? $(this).attr('class') : '';
             return "<li class='" + copyClasses + "'>" + $(this).html() + "</li>";
-=======
-            return "<li>" + $(this).html() + "</li>";
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
           }).get().join('');
 
           $customList.append(liHtml);
@@ -430,11 +381,7 @@
           $options = $select.find('option'),
           $listItems = $customSelect.find('li');
 
-<<<<<<< HEAD
       if ($listItems.length !== this.cache[$customSelect.data('id')] || force_refresh) {
-=======
-      if ($listItems.length != this.cache[$customSelect.data('id')] || force_refresh) {
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
         $customSelect.find('ul').html('');
 
         $options.each(function () {
@@ -502,10 +449,7 @@
     },
 
     escape: function (text) {
-<<<<<<< HEAD
       if (!text) return '';
-=======
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
       return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
     },
 
@@ -528,12 +472,8 @@
           var _self = this;
 
           // Set all hidden parent elements, including this element.
-<<<<<<< HEAD
           _self.hidden = $child.parents();
           _self.hidden = _self.hidden.add($child).filter(":hidden");
-=======
-          _self.hidden = $child.parents().andSelf().filter(":hidden");
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
 
           // Loop through all hidden elements.
           _self.hidden.each(function () {
@@ -600,17 +540,4 @@
     }
     return $();
   };
-<<<<<<< HEAD
 }(Foundation.zj, this, this.document));
-=======
-
-  var getFirstPrevSibling = function($el, selector) {
-    var $el = $el.prev();
-    while ($el.length) {
-      if ($el.is(selector)) return $el;
-      $el = $el.prev();
-    }
-    return $();
-  };
-}(Foundation.zj, this, this.document));
->>>>>>> a8a47cd53dbbd665c04e8c631da2e58dd91ae0a6
