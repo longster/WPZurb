@@ -68,6 +68,13 @@
 
 	<script src="<?php bloginfo( 'template_url' );?>/js/wpzurb.js"></script>
 
+	<?php if(is_single()) : ?>
+	<script type="text/javascript">
+		//set sidebar to to match the document height
+		document.getElementById('sidebar').style.height = $(document).height() - 380 + "px";
+	</script>
+	<?php endif; ?>
+
 	<?php wp_footer(); ?>
 
 </body>

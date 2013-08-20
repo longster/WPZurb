@@ -13,7 +13,5 @@ $(document).ready(function(){
 		)}
 	)(jQuery);
 
-	//set sidebar to to match the document height
-	document.getElementById('sidebar').style.height = $(document).height() - 380 + "px";
 
 }); 

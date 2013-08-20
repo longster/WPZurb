@@ -644,12 +644,12 @@ label small { text-transform: capitalize; color: #666666; }
 
 .postfix.button.round { -webkit-border-radius: 0; border-radius: 0; -moz-border-radius-topright: 1000px; -moz-border-radius-bottomright: 1000px; -webkit-border-top-right-radius: 1000px; -webkit-border-bottom-right-radius: 1000px; border-top-right-radius: 1000px; border-bottom-right-radius: 1000px; }
 
-/* Separate prefix and postfix styles when on span so buttons keep their own */
-span.prefix { background: #f2f2f2; border-color: #d9d9d9; border-right: none; color: #333333; }
-span.prefix.radius { -webkit-border-radius: 0; border-radius: 0; -moz-border-radius-bottomleft: 3px; -moz-border-radius-topleft: 3px; -webkit-border-bottom-left-radius: 3px; -webkit-border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-left-radius: 3px; }
+/* Separate prefix and postfix styles when on span or label so buttons keep their own */
+span.prefix, label.prefix { background: #f2f2f2; border-color: #d9d9d9; border-right: none; color: #333333; }
+span.prefix.radius, label.prefix.radius { -webkit-border-radius: 0; border-radius: 0; -moz-border-radius-bottomleft: 3px; -moz-border-radius-topleft: 3px; -webkit-border-bottom-left-radius: 3px; -webkit-border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-left-radius: 3px; }
 
-span.postfix { background: #f2f2f2; border-color: #cccccc; border-left: none; color: #333333; }
-span.postfix.radius { -webkit-border-radius: 0; border-radius: 0; -moz-border-radius-topright: 3px; -moz-border-radius-bottomright: 3px; -webkit-border-top-right-radius: 3px; -webkit-border-bottom-right-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
+span.postfix, label.postfix { background: #f2f2f2; border-color: #cccccc; border-left: none; color: #333333; }
+span.postfix.radius, label.postfix.radius { -webkit-border-radius: 0; border-radius: 0; -moz-border-radius-topright: 3px; -moz-border-radius-bottomright: 3px; -webkit-border-top-right-radius: 3px; -webkit-border-bottom-right-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
 
 /* Input groups will automatically style first and last elements of the group */
 .input-group.radius > *:first-child, .input-group.radius > *:first-child * { -moz-border-radius-bottomleft: 3px; -moz-border-radius-topleft: 3px; -webkit-border-bottom-left-radius: 3px; -webkit-border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-left-radius: 3px; }
@@ -674,12 +674,15 @@ fieldset { border: solid 1px #dddddd; padding: 1.25em; margin: 1.125em 0; }
 fieldset legend { font-weight: bold; background: white; padding: 0 0.1875em; margin: 0; margin-left: -0.1875em; }
 
 /* Error Handling */
-span.error, small.error { display: block; padding: 0.375em 0.25em; margin-top: 0; margin-bottom: 1em; font-size: 0.75em; font-weight: bold; background: #c60f13; color: white; display: none; }
+[data-abide] .error small.error, [data-abide] span.error, [data-abide] small.error { display: block; padding: 0.375em 0.25em; margin-top: -1.3125em; margin-bottom: 1em; font-size: 0.75em; font-weight: bold; background: #c60f13; color: white; margin-top: 0; }
+[data-abide] span.error, [data-abide] small.error { display: none; }
+
+span.error, small.error { display: block; padding: 0.375em 0.25em; margin-top: -1.3125em; margin-bottom: 1em; font-size: 0.75em; font-weight: bold; background: #c60f13; color: white; }
 
 .error input, .error textarea, .error select { border-color: #c60f13; background-color: rgba(198, 15, 19, 0.1); margin-bottom: 0; }
 .error input:focus, .error textarea:focus, .error select:focus { background: #fafafa; border-color: #999999; }
 .error label, .error label.error { color: #c60f13; }
-.error small.error { display: block; padding: 0.375em 0.25em; margin-top: 0; margin-bottom: 1em; font-size: 0.75em; font-weight: bold; background: #c60f13; color: white; }
+.error small.error { display: block; padding: 0.375em 0.25em; margin-top: -1.3125em; margin-bottom: 1em; font-size: 0.75em; font-weight: bold; background: #c60f13; color: white; }
 .error span.error-message { display: block; }
 
 input.error, textarea.error { border-color: #c60f13; background-color: rgba(198, 15, 19, 0.1); }
