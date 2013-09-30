@@ -39,35 +39,36 @@
 	</footer>
 
 
+<?php /*
 	<script>
 		document.write('<script src=' +
-		('__proto__' in {} ? '<?php bloginfo( 'template_url' );?>/js/vendor/zepto' : '<?php bloginfo( 'template_url' );?>/js/vendor/jquery') +
+		('__proto__' in {} ? '<?php bloginfo( 'template_url' );?>/assets/js/vendor/zepto' : '<?php bloginfo( 'template_url' );?>/js/vendor/jquery') +
 		'.js><\/script>')
 	</script>
 
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.js"></script>
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.abide.js"></script>	
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.alerts.js"></script>	
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.clearing.js"></script>	
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.cookie.js"></script>	
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.dropdown.js"></script>	
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.forms.js"></script>	
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.interchange.js"></script>	
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.joyride.js"></script>	
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.magellan.js"></script>	
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.orbit.js"></script>	
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.placeholder.js"></script>	
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.reveal.js"></script>	
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.section.js"></script>	
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.tooltips.js"></script>	
-	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.topbar.js"></script>
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.js"></script>
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.abide.js"></script>	
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.alerts.js"></script>	
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.clearing.js"></script>	
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.cookie.js"></script>	
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.dropdown.js"></script>	
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.forms.js"></script>	
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.interchange.js"></script>	
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.joyride.js"></script>	
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.magellan.js"></script>	
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.orbit.js"></script>	
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.placeholder.js"></script>	
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.reveal.js"></script>	
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.section.js"></script>	
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.tooltips.js"></script>	
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/foundation/foundation.topbar.js"></script>
 	
 	<script>
 	$(document).foundation();
 	</script>
 
-	<script src="<?php bloginfo( 'template_url' );?>/js/wpzurb.js"></script>
-
+	<script src="<?php bloginfo( 'template_url' );?>/assets/js/wpzurb.js"></script>
+*/ ?>
 	<?php if(is_single()) : ?>
 	<script type="text/javascript">
 		//set sidebar to to match the document height
