@@ -81,13 +81,13 @@ function wpzurb_remove_recent_comments_style() {
 
 /**********************
 Enqueue Scripts
-**********************
+**********************/
 
 // load modernizr, jquery, and js (navtoggle and foundation) script
 function wpzurb_scripts_and_styles() {
     if (!is_admin()) {
         // modernizr (without media query polyfill)
-        wp_register_script( 'wpzurb-modernizr', get_stylesheet_directory_uri() . '/assets/js/vendor/custom.modernizr.js', array(), '2.6.2', false );
+        wp_register_script( 'wpzurb-modernizr', get_stylesheet_directory_uri() . '/js/vendor/custom.modernizr.js', array(), '2.6.2', false );
         // deregister WordPress built in jQuery
         wp_deregister_script('jquery');
         // register Google jQuery
@@ -104,6 +104,6 @@ function wpzurb_scripts_and_styles() {
         //wp_enqueue_script( 'wpzurb-navtoggle' );
        
     }
-}*/
+}
 
 ?>

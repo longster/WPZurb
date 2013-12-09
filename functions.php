@@ -24,7 +24,8 @@ require_once('lib/initialize.php');
 /* Insert Sass or CSS
  * all the cleaning and enqueue if you Sass to customize wpzurb
  * */
-require_once('lib/enqueue.php'); // Default Sass/SCSS
+require_once('lib/enqueue-sass.php'); // Default Sass/SCSS
+//require_once('lib/enqueue-css.php'); // to use straight CSS for customization, uncomment this line and comment the above Sass line
 
 
 /* Zurb Foundation functions - lib/foundation.php
